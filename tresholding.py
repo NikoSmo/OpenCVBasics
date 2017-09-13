@@ -5,7 +5,6 @@ import cv2
 img = cv2.imread('images/bookpage.jpg')
 grayscaled = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-
 ret2, threshold = cv2.threshold(img, 10, 255, cv2.THRESH_BINARY)
 cv2.imshow('normal_threshold_color', threshold)
 
