@@ -1,2 +1,2 @@
 # OpenCVBasics
-OpenCV Playground with Python 2.7
+OpenCV Playground with Python 3.5
