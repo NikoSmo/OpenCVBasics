@@ -1,1 +1,4 @@
 .idea
+haarcascade_mug/false_images
+haarcascade_mug/pos
+haarcascade_mug/neg
