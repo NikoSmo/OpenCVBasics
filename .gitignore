@@ -2,3 +2,5 @@
 haarcascade_mug/false_images
 haarcascade_mug/pos
 haarcascade_mug/neg
+haarcascade_mug/info
+haarcascade_watch/neg
