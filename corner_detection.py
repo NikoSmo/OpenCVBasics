@@ -7,10 +7,11 @@ img = cv2.imread('images/corner_detection_superman.jpg')
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 gray = np.float32(img_gray)
 
-corners = cv2.goodFeaturesToTrack(image= gray, maxCorners= 100, qualityLevel= 0.1, minDistance= 5)
+corners = cv2.goodFeaturesToTrack(
+    image=gray, maxCorners=100, qualityLevel=0.1, minDistance=5)
 corners = np.int0(corners)
 
-#Alternative Edge Detectors
+# Alternative Edge Detectors
 # cv2.cornerHarris(src, blockSize, ksize, k[, dst[, borderType]]) → dst
 # cv2.cornerEigenValsAndVecs(src, blockSize, ksize[, dst[, borderType]]) → dst
 

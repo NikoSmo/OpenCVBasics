@@ -14,12 +14,13 @@ ret, mask = cv2.threshold(img2grey, 220, 255, cv2.THRESH_BINARY_INV)
 mask_inv = cv2.bitwise_not(mask)
 
 img1_bg = cv2.bitwise_and(roi, roi, mask=mask_inv)
-img2_fg = cv2.bitwise_and(img2, img2, mask = mask)
+img2_fg = cv2.bitwise_and(img2, img2, mask=mask)
 
 overlayedImage = cv2.add(img1_bg, img2_fg)
 cv2.imshow('img1_bg', img1_bg)
 cv2.imshow('img2_bg', img2_fg)
 cv2.imshow('overlayedImage', overlayedImage)
+
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
