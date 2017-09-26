@@ -10,7 +10,7 @@ cv2.rectangle(img, (15, 25), (200, 150), (0, 255, 0), 5)
 cv2.circle(img, (250, 250), 55, (0, 0, 255), -1)
 
 pts = np.array([[10, 5], [20, 20], [30, 300], [60, 300], [90, 30]], np.int32)
-#pts = pts.reshape((-1, 1, 2))
+# pts = pts.reshape((-1, 1, 2))
 cv2.polylines(img, [pts], True, (255, 255, 255), 2)
 
 font = cv2.FONT_HERSHEY_SIMPLEX

@@ -1,6 +1,4 @@
-import numpy as np
 import cv2
-import time
 
 img = cv2.imread('images/cat.jpg')
 img = cv2.imread('images/god.jpg')

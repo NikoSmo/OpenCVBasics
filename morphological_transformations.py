@@ -3,10 +3,8 @@ import numpy as np
 
 
 img = cv2.imread('images/fanta_logo.jpg', cv2.IMREAD_COLOR)
-
 img_resized = cv2.resize(img, None, fx=0.25, fy=0.25,
                          interpolation=cv2.INTER_CUBIC)
-
 hsv = cv2.cvtColor(img_resized, cv2.COLOR_BGR2HSV)
 
 # BGR

@@ -27,7 +27,6 @@ from __future__ import print_function
 import numpy as np
 import cv2
 import sys
-import re
 
 global filename
 BLUE = [255, 0, 0]        # rectangle color
@@ -70,7 +69,7 @@ def onmouse(event, x, y, flags, param):
         ix, iy = x, y
 
     elif event == cv2.EVENT_MOUSEMOVE:
-        if rectangle == True:
+        if rectangle is True:
             img = img2.copy()
             cv2.rectangle(img, (ix, iy), (x, y), BLUE, 2)
             rect = (min(ix, x), min(iy, y), abs(ix - x), abs(iy - y))
@@ -87,7 +86,7 @@ def onmouse(event, x, y, flags, param):
     # draw touchup curves
 
     if event == cv2.EVENT_LBUTTONDOWN:
-        if rect_over == False:
+        if rect_over is False:
             print("first draw rectangle \n")
         else:
             drawing = True
@@ -95,12 +94,12 @@ def onmouse(event, x, y, flags, param):
             cv2.circle(mask, (x, y), thickness, value['val'], -1)
 
     elif event == cv2.EVENT_MOUSEMOVE:
-        if drawing == True:
+        if drawing is True:
             cv2.circle(img, (x, y), thickness, value['color'], -1)
             cv2.circle(mask, (x, y), thickness, value['val'], -1)
 
     elif event == cv2.EVENT_LBUTTONUP:
-        if drawing == True:
+        if drawing is True:
             drawing = False
             cv2.circle(img, (x, y), thickness, value['color'], -1)
             cv2.circle(mask, (x, y), thickness, value['val'], -1)
@@ -117,7 +116,7 @@ if __name__ == '__main__':
     else:
         print("No input image given, so loading default image, ../data/lena.jpg \n")
         print("Correct Usage: python grabcut.py <filename> \n")
-        #filename = '../data/lena.jpg'
+        # filename = '../data/lena.jpg'
 
     img = cv2.imread(filepath)
     img2 = img.copy()                               # a copy of original image
@@ -153,8 +152,8 @@ if __name__ == '__main__':
         elif k == ord('3'):  # PR_FG drawing
             value = DRAW_PR_FG
         elif k == ord('s'):  # save image
-            #bar = np.zeros((img.shape[0],5,3),np.uint8)
-            #res = np.hstack((img2,bar,img,bar,output))
+            # bar = np.zeros((img.shape[0],5,3),np.uint8)
+            # res = np.hstack((img2,bar,img,bar,output))
             res = output
             file_ending = ['.jpg', '.png']
             if filename.endswith('.jpg'):

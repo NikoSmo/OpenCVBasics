@@ -1,4 +1,3 @@
-import numpy as np
 import cv2
 # this is the cascade we just made. Call what you want
 watch_cascade = cv2.CascadeClassifier('cascade_watch.xml')

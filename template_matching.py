@@ -1,11 +1,11 @@
 import cv2
 import numpy as np
 
-#img_rgb = cv2.imread('images/template_matching_image.jpg')
+# img_rgb = cv2.imread('images/template_matching_image.jpg')
 img_rgb = cv2.imread('images/black_box.jpg')
 img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
 
-#template = cv2.imread('images/template.jpg',0)
+# template = cv2.imread('images/template.jpg',0)
 template = cv2.imread('images/black_box_template.jpg', 0)
 # get width and height
 w, h = template.shape[::-1]

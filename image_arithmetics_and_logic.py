@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 
 # Load two images
 img1 = cv2.imread('images/3D-Matplotlib.png')

@@ -1,10 +1,9 @@
-import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 
-#img = cv2.imread('images/feature_matching.jpg', 1)
+# img = cv2.imread('images/feature_matching.jpg', 1)
 img = cv2.imread('images/tasse.jpg', 1)
-#img_tmp = cv2.imread('images/feature_matching_template.jpg', 1)
+# img_tmp = cv2.imread('images/feature_matching_template.jpg', 1)
 img_tmp = cv2.imread('images/tasse_template.jpg', 1)
 
 orb = cv2.ORB_create()
