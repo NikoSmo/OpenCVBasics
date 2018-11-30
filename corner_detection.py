@@ -18,7 +18,14 @@ corners = np.int0(corners)
 for corner in corners:
     x, y = corner.ravel()
     cv2.circle(img, (x, y), 3, 255, -1)
-
+    cv2.HoughCircles()
 cv2.imshow('Corners', img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+
+def blub(here):
+    print(here)
+
+
+a = blub("jop")

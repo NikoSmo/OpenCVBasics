@@ -10,7 +10,10 @@ while(True):
     # Capture frame-by-frame
     _, frame = cap.read()
     # Display the resulting frame
-    cv2.imshow('frame', frame)
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    dst = cv2.cornerHarris(gray, 20, 3, 10)
+    cv2.imshow('corners', dst)
+    cv2.imshow('gray', gray)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
